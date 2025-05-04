@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    viewModel.refrash();
     print("\x1B[31mHOME BUILD ISHLADI\x1B[0m");
     return Scaffold(
       appBar: AppBar(
@@ -98,9 +99,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               SizedBox(height: 20),
               Consumer<MyViewModel>(
-                builder: (_,value,__) {
+                builder: (_, value, __) {
                   return MonthDetails();
-                }
+                },
               ),
               SizedBox(height: 40),
             ],

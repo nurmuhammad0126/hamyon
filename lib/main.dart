@@ -18,11 +18,15 @@ class MainApp extends StatefulWidget {
   State<MainApp> createState() => _MainAppState();
 }
 
+
 class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (ctx) => MyViewModel())],
+      providers: [
+        
+        ChangeNotifierProvider(create: (ctx) => MyViewModel())
+      ],
       child: AdaptiveTheme(
         initial: AdaptiveThemeMode.light,
         light: ThemeData(brightness: Brightness.light),
